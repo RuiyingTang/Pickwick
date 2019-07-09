@@ -1,0 +1,417 @@
+:root {
+  --primary-color: #4b9618;
+  --light-color: #fff;
+  --dark-color: #333;
+  --max-width: 1100px;
+}
+html {
+  box-sizing: border-box;
+}
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+  margin: 0;
+}
+body {
+  font-family: "Quicksand", sans-serif;
+  background-color: var(--light-color);
+  line-height: 1.7rem;
+  position: relative;
+  z-index: 1;
+}
+body::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url("https://www.pickwick.nl/_new/iconselements/parallax/leave-large2.png"),
+    url("https://www.pickwick.nl/_new/iconselements/parallax/leave-medium2.png"),
+    url("https://www.pickwick.nl/_new/iconselements/parallax/leave-small2.png");
+  background-repeat: no-repeat;
+  background-position: 20px 25%, 100px 20%, 40px 23%;
+  z-index: -1;
+  display: none;
+}
+body::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url("https://www.pickwick.nl/_new/iconselements/parallax/leave-large2.png"),
+    url("https://www.pickwick.nl/_new/iconselements/parallax/leave-medium2.png"),
+    url("https://www.pickwick.nl/_new/iconselements/parallax/leave-small2.png");
+  background-repeat: no-repeat;
+
+  transform: rotate(0.5turn);
+  background-position: 40px 58%, 20px 53%, 100px 55.5%;
+  z-index: -1;
+  display: none;
+}
+a {
+  color: #333;
+  text-decoration: none;
+}
+
+ul {
+  list-style: none;
+}
+.container {
+  max-width: var(--max-width);
+  margin: 0 auto;
+}
+.btn {
+  display: inline-block;
+  padding: 10px 20px;
+  border-radius: 45px;
+  background-color: var(--primary-color);
+  color: var(--light-color);
+  border: 2px solid var(--primary-color);
+  background-position: 0 -140%;
+  background-repeat: repeat-x;
+  transition: all 0.65s ease;
+}
+
+.btn:hover {
+  background-image: url(https://www.pickwick.nl/siteassets/_new/iconselements/buttons/liquid-fill-white.svg);
+  background-position: 120% 30%;
+  color: var(--primary-color);
+}
+.green-link {
+  display: block;
+  color: var(--primary-color);
+  margin: 20px;
+}
+.title-1 {
+  font-family: "Merienda", cursive;
+  color: var(--primary-color);
+  font-size: 40px;
+  font-weight: 500;
+  margin-bottom: 40px;
+}
+.title-2 {
+  font-family: "Merienda", cursive;
+  font-size: 24px;
+  font-weight: lighter;
+  margin: 20px;
+}
+.title-3 {
+  font-family: "Merienda", cursive;
+  font-size: 18px;
+  font-weight: lighter;
+  margin: 20px 0;
+}
+.title-dark {
+  font-family: "Merienda", cursive;
+  color: var(--dark-color);
+  font-size: 24px;
+  font-weight: 400;
+  margin: 40px 0;
+}
+
+.p-1 {
+  margin: 20px 0;
+  font-weight: lighter;
+}
+.p-2 {
+  margin: 20px;
+  font-weight: lighter;
+}
+.card-1 {
+  margin: 20px;
+}
+.card-1:hover {
+  border: 1px none;
+  box-shadow: 1px 4px 10px gray, -1px 4px 10px gray;
+}
+.one-column-container {
+  margin: 0 20px;
+}
+input {
+  padding: 1rem;
+  border: 1px none;
+  border-radius: 40px;
+  background-color: #f3f3f3;
+}
+input:focus {
+  background: var(--light-color);
+  outline: none;
+}
+
+/* Navigation */
+.nav-bar {
+  position: sticky;
+  top: 0;
+  background-color: var(--light-color);
+  z-index: 99;
+}
+.nav-bar .container {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  text-align: center;
+  margin: 10px auto;
+}
+.nav-img {
+  flex: 1 0 10%;
+}
+.nav-list {
+  flex: 1 0 45%;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  text-align: center;
+}
+
+.nav-img img {
+  max-width: 100%;
+}
+.mobile-menu {
+  display: none;
+}
+/* Showcase */
+.showcase {
+  color: var(--light-color);
+  position: relative;
+  min-height: 80vh;
+  background: url(https://www.pickwick.nl/siteassets/_new/iconselements/masks/header-mask.svg)
+    no-repeat bottom;
+}
+.showcase::before {
+  content: " ";
+  background: url("https://www.pickwick.nl/siteassets/_new/iconselements/header-visuals/pick_2019_zom_avon_0489.jpg?preset=block-background-mobile")
+    no-repeat center center/cover;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0.8;
+  z-index: -1;
+}
+.showcase .container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  justify-content: end;
+  height: 80vh;
+}
+
+.showcase p {
+  font-size: 1.3rem;
+  padding: 10px;
+  font-weight: 900;
+}
+
+/* Even section */
+.two-columns-container {
+  min-height: 70vh;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  justify-items: center;
+  align-items: center;
+  grid-column-gap: 40px;
+}
+.two-columns-container img,
+.two-columns-container video {
+  display: block;
+  max-width: 100%;
+  /* height: auto; */
+}
+
+/* Favoriete */
+#favoriete {
+  margin: 40px auto;
+  min-height: 100vh;
+  background-color: #f3f3f3;
+  position: relative;
+  z-index: 1;
+}
+#favoriete::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: url("https://www.pickwick.nl/siteassets/_new/iconselements/masks/inverted-mask.svg")
+    top no-repeat;
+  z-index: -1;
+}
+#favoriete::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: url("https://www.pickwick.nl/siteassets/_new/iconselements/masks/inverted-mask.svg")
+    top no-repeat;
+  transform: rotate(0.5turn);
+  z-index: -1;
+}
+
+.favoriete-container {
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-items: center;
+  margin: 30px auto;
+}
+#favoriete button {
+  display: block;
+  color: var(--primary-color);
+  font-size: 2rem;
+  border: none;
+
+  border-radius: 50%;
+  background-color: white;
+}
+.button-left {
+  padding: 50px 30px 50px 70px;
+  margin-left: -50px;
+}
+
+.button-right {
+  padding: 50px 70px 50px 30px;
+  margin-right: -50px;
+}
+
+.four-columns-container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  align-items: end;
+  grid-column-gap: 40px;
+}
+
+.card-2-img img {
+  position: relative;
+  left: 0;
+  bottom: 0;
+  width: 60%;
+  margin: 0 auto;
+  transition: bottom 0.5s ease;
+}
+.card-2-img img:hover {
+  bottom: 20px;
+}
+.smaak-link:hover {
+  color: var(--primary-color);
+}
+
+/* Inspireren */
+#inspireren h1 {
+  text-align: center;
+}
+.three-columns-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  align-items: stretch;
+  margin-bottom: 40px;
+}
+.three-columns-container img {
+  display: block;
+  max-width: 100%;
+}
+/* Newsletter */
+#newsletter {
+  background: url("https://www.pickwick.nl/siteassets/_new/iconselements/header-visuals/newsletter-desktop.png")
+    no-repeat center center/cover;
+  height: 100vh;
+}
+#newsletter .container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+.contact-form .form-group {
+  margin: 20px 0;
+}
+.radio label {
+  display: inline-block;
+  margin-right: 2rem;
+  margin-left: 1rem;
+}
+.radio input,
+.check-box input {
+  display: inline-block;
+  width: 30px;
+  height: 30px;
+  vertical-align: -10px;
+  -webkit-appearance: none;
+}
+.check-box input {
+  border-radius: 0;
+}
+.radio input:checked,
+.check-box input:checked {
+  background: url(https://www.pickwick.nl/siteassets/_new/iconselements/icons/checkmark-form-green.svg)
+    no-repeat center center;
+  background-color: white;
+}
+.naam label,
+.email label {
+  display: block;
+  margin-bottom: 5px;
+}
+.naam {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-column-gap: 20px;
+}
+.naam input,
+.email input {
+  width: 100%;
+}
+
+/* Social */
+#social .container {
+  display: flex;
+  justify-content: space-between;
+}
+#social a:hover {
+  opacity: 0.7;
+}
+/* Sitemap */
+#sitemap .container {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  margin: 40px auto;
+}
+.sitemap-list {
+  padding-left: 0;
+  line-height: 2rem;
+  font-size: 0.8rem;
+}
+.sitemap-list a:hover {
+  color: var(--primary-color);
+}
+#sitemap .icon-img {
+  display: flex;
+  grid-column: 5;
+  justify-content: flex-end;
+  align-items: flex-start;
+}
+#sitemap .icon-img img {
+  max-width: 70%;
+}
+/* Footer */
+.main-footer {
+  margin: 40px auto;
+}
+.main-footer .icon-img {
+  display: none;
+}
+
+@media (min-width: 1400px) {
+  body::before,
+  body::after {
+    display: block;
+  }
+}
