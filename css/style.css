@@ -48,7 +48,7 @@ body::after {
   background-repeat: no-repeat;
 
   transform: rotate(0.5turn);
-  background-position: 40px 58%, 20px 53%, 100px 55.5%;
+  background-position: 40px 60%, 20px 55%, 100px 57.5%;
   z-index: -1;
   display: none;
 }
@@ -321,7 +321,7 @@ input:focus {
 #newsletter {
   background: url("https://www.pickwick.nl/siteassets/_new/iconselements/header-visuals/newsletter-desktop.png")
     no-repeat center center/cover;
-  height: 100vh;
+  height: 120vh;
 }
 #newsletter .container {
   display: grid;

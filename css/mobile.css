@@ -19,9 +19,10 @@
 
   /* Favoriete */
   .four-columns-container {
-    grid-template-columns: repeat(2, 1fr);
+    display: flex;
   }
-  .four-columns-container div:nth-child(2n) {
+  .four-columns-container div:nth-child(2n),
+  .four-columns-container div:nth-child(3) {
     display: none;
   }
 
