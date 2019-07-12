@@ -19,10 +19,9 @@
 
   /* Favoriete */
   .four-columns-container {
-    display: flex;
+    grid-template-columns: repeat(2, 1fr);
   }
-  .four-columns-container div:nth-child(2n),
-  .four-columns-container div:nth-child(3) {
+  .four-columns-container div:nth-child(2n) {
     display: none;
   }
 
@@ -85,11 +84,13 @@
   }
   /* Favoriete */
   .four-columns-container {
-    grid-template-columns: repeat(2, 1fr);
+    display: flex;
   }
-  .four-columns-container div:nth-child(2n) {
+  .four-columns-container div:nth-child(2n),
+  .four-columns-container div:nth-child(3) {
     display: none;
   }
+
   /* Inspireren */
   .three-columns-container {
     display: flex;

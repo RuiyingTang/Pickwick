@@ -18,7 +18,7 @@ body {
   background-color: var(--light-color);
   line-height: 1.7rem;
   position: relative;
-  z-index: 1;
+  /* z-index: 1; */
 }
 body::before {
   content: "";
@@ -32,8 +32,9 @@ body::before {
     url("https://www.pickwick.nl/_new/iconselements/parallax/leave-small2.png");
   background-repeat: no-repeat;
   background-position: 20px 25%, 100px 20%, 40px 23%;
-  z-index: -1;
+  z-index: 2;
   display: none;
+  pointer-events: none;
 }
 body::after {
   content: "";
@@ -49,8 +50,9 @@ body::after {
 
   transform: rotate(0.5turn);
   background-position: 40px 60%, 20px 55%, 100px 57.5%;
-  z-index: -1;
+  z-index: 2;
   display: none;
+  pointer-events: none;
 }
 a {
   color: #333;
@@ -280,10 +282,12 @@ input:focus {
   padding: 50px 70px 50px 30px;
   margin-right: -50px;
 }
-
+.favoriete-container .container {
+  flex: 1 0 auto;
+}
 .four-columns-container {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
   align-items: end;
   grid-column-gap: 40px;
 }
@@ -393,10 +397,9 @@ input:focus {
   color: var(--primary-color);
 }
 #sitemap .icon-img {
-  display: flex;
+  display: grid;
   grid-column: 5;
-  justify-content: flex-end;
-  align-items: flex-start;
+  justify-items: end;
 }
 #sitemap .icon-img img {
   max-width: 70%;
@@ -413,5 +416,15 @@ input:focus {
   body::before,
   body::after {
     display: block;
+  }
+  #even-section,
+  #tea-topics,
+  #inspireren,
+  #newsletter,
+  #social,
+  #sitemap,
+  .main-footer {
+    position: relative;
+    z-index: 3;
   }
 }
