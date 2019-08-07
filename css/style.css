@@ -283,7 +283,7 @@ input:focus {
   margin-right: -50px;
 }
 .favoriete-container .container {
-  flex: 1 0 auto;
+  flex: 1 1 auto;
 }
 .four-columns-container {
   display: grid;
